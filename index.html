@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            background-color: #c9e7ff;
+            font-family: monospace,"微軟正黑體";
+        }
+        header{
+        width: 100%;
+        height: 80px;
+        background-color: white;
+        padding:0 80px;
+        z-index: 999;
+        position: relative;
+        font-size: 16px;
+        font-weight: bold;
+        box-shadow: 10px;
+       }
+       .left{
+           float: left;
+       }
+       .right{
+           float: right;
+           padding-right: 40px;
+       }
+       h2{
+            float:right;
+            color: #a5c7e2;
+            line-height: 80px;
+            text-align: center;
+            text-shadow:  2px 2px 2px#c4e0f7;
+        }
+       ul>li{
+           float: left;
+           list-style:none;
+           width: 100px;
+           height: 80px;
+           line-height: 80px;
+           text-align: center;
+       }
+       ul>li:hover{
+           background-color:#a5c7e2;
+           transition:0.5s ;
+       }
+       ul>li:hover>a{
+           color:white;
+       }
+       ul>li>ul>li{
+            background-color:white;
+            clear: left;
+            list-style:none;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+       }
+       ul>li:hover>ul>li:hover{
+           background-color: #a5c7e2;
+           transition:0.5s ;
+        }
+        ul>li:hover>ul>li:hover>a{
+           color:white;
+        }
+        ul>li>a{
+            color:#a5c7e2;
+            text-decoration:none
+        }
+        ul>i>ul>li>a{
+            text-decoration:none
+        }
+        ul>li>ul{
+            visibility: hidden;
+        }
+        ul>li:hover>ul>li{
+            visibility: visible;
+        }
+        .cart{
+            float: right;
+            height:20px;
+            width:20px;
+            display: flex;
+            margin: auto;
+            margin-top: 30px;
+            margin-left: 20px;
+           
+        }
+        .vip{
+            float: right;
+            height:20px;
+            width:20px;
+            display: flex;
+            margin: auto;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        .allimg{
+            position: relative;
+            margin: auto;
+            width: 400px;
+            height: 300px;
+            /*overflow: hidden;*/
+            margin-top:40px;
+       }
+       .allimg img{
+            width: 100%;
+            height: 300px;
+            display: block;
+            position: absolute;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            animation: slider 12s linear infinite;
+       }
+       @keyframes slider {
+    2.5% {
+      opacity: 1;
+      filter: alpha(opacity=100);
+    }
+    17.5% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    }
+    20% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    }
+  }
+  .allimg img:nth-child(1) {
+    animation-delay: 0s;
+  }
+ 
+  .allimg img:nth-child(2) {
+    animation-delay: 4s;
+  }
+ 
+  .allimg img:nth-child(3) {
+    animation-delay: 8s;
+  }
+  .hot{
+      width: 80%;
+      height: 400px;
+      display: flex;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      padding: 30px;
+      border: 3px white solid;
+      border-radius: 10px;
+  }
+  .hot-text{
+      text-align: center;
+      margin-top: 70px;
+      font-size: 30px;
+      color: white;
+      font-weight: bolder;
+      text-shadow:  5px 5px 5px#a5c7e2;
+  }
+  .hot img{
+            
+            width: 200px;
+            height: 200px;
+            display:flex;
+            margin: auto;
+            padding: 20px 30px;
+            background-color: white;
+            border-radius: 6px;
+        }
+   .hot>p{
+    color: white;
+   }
+        .product-1{
+            padding: 20px 30px;
+            background-color: #a5c7e2;
+            border-radius: 6px;
+            margin: auto;
+            text-align: center;
+            color: white;
+        }
+        .product>img{
+            overflow:hidden;
+        transform:scale(1,1);transition: all 0.5s ease-out;
+        padding-top: 10px;
+
+        }
+        .product-2{
+            padding: 20px 30px;
+            background-color: #a5c7e2;
+            border-radius: 6px;
+            margin: auto;
+            text-align: center;
+            color: white;
+        }
+        .product-3{
+            padding: 20px 30px;
+            background-color: #a5c7e2;
+            border-radius: 6px;
+            margin: auto;
+            text-align: center;
+            color: white;
+        }
+        footer{
+            clear: both;
+            height: 90px;
+            background-color: #fef5d8;
+        }
+        p.footer{
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="left">
+            <h2>罩單全收</h2>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href=>商品</a></li>
+                <li> <a href=>常見問題</a>
+                <ul>
+                    <li><a href=>購物常見問題</a></li>
+                    <li><a href=>退貨須知</a></li>
+                    <li><a href=>會員常見問題</a></li>
+                </ul>
+                </li>
+                <li> <a href=>聯絡我們</a></li>
+                <img src="assets/image/title/shopping_cart_PNG58.png" class="cart">
+                <img src="assets/image/title/people.png" class="vip">
+            </ul>
+        </div>
+    </header>
+        <div class="allimg">
+            <img src="assets/image/cover/cover-1.png">
+            <img src="assets/image/smell/smell-1.png">
+            <img src="assets/image/cloth/cloth-4.jpg">
+        </div>
+
+        <p class="hot-text">熱銷商品</p>
+        <div class="hot">
+            <div class="product-1">
+            <img src="assets/image/mask/S__12681242.jpg">
+            <p class="product-text">醫用口罩-神秘薰紫</p>
+            </div>
+
+            <div class="product-2">
+            <img src="assets/image/mask/S__12681243.jpg">
+            <p class="product-text">醫用口罩-薄霧灰藍</p>
+            </div>
+
+            <div class="product-3">
+            <img src="assets/image/KF94/S__12681239.jpg">
+            <p class="product-text">4D立體醫用口罩-船塢粉藍</p>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <br>
+                <br>
+                <p class="footer">
+                    Copyright © 2021 罩單全收. All rights reserved.
+                </p>
+                <br>
+            </div>
+        </footer>
+</body>
+</html>
