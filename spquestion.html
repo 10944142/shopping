@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>購物常見問題</title>
+    <style>
+        @import url("assets/css/title.css");
+        @import url("assets/css/vip.css");
+        @import url("assets/css/footer.css");
+        @import url("assets/css/question.css");
+    </style>
+</head>
+<body>
+    <header>
+        <div class="left">
+            
+            <img src="assets/image/title/5879311_mask_medical_protection_respiratory_surgical_icon.png" class="maskleft">
+            <div class="left-text">
+                <h2 class="h2-title">罩單全收</h2>
+                <button class="searchimg"><img src="assets/image/title/8377.png_300.png"></button>
+                <input class="search" type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="product.html">商品</a></li>
+                <li> <a href="spquestion.html">常見問題</a>
+                    <ul>
+                        <li><a href="spquestion.html">購物常見問題</a></li>
+                        <li><a href="return.html">退貨須知</a></li>
+                        <li><a href="mbquestion.html">會員常見問題</a></li>
+                    </ul>
+                </li>
+                <li> <a href="aboutus.html">聯絡我們</a></li>
+                <li><a href="information.html">會員專區</a></li>
+                <li onclick="document.getElementById('id01').style.display='block'" class="logsign">登入/註冊</li>
+                <a href="spcart.html"><img src="assets/image/title/shopping_cart_PNG58.png" class="cart"></a>
+                
+            </ul>
+        </div>
+            
+
+        <div id="id01" class="modal">
+            
+            <form class="modal-content animate" action="/action_page.php" method="post" id="container1">
+                <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+                    <p class="h1-title">登入 Login</p>
+                    <div class="container">
+
+                        <input type="text" placeholder="帳號" name="uname" class="username"required id="username">
+
+                        <input type="password" placeholder="密碼" name="psw"class="password" required id="password">
+                            
+                        <button type="submit" class="peoplebutton">Login</button>
+                    </div>
+                        <h5 onclick="show_hide()">註冊帳號</h5>
+            </form>
+            
+            <form class="modal-content animate" action="/action_page.php" method="post" id="container2" >
+                <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+                    <p class="h1-title">註冊 Sign Up</p>
+                    <div class="container">
+
+                        <input type="text" id="fullname" name="fullname" placeholder="使用者全名" required>
+
+                        <input type="text" placeholder="帳號" name="uname" class="username"required id="username2">
+
+                        <input type="password" placeholder="密碼" name="psw"class="password" required id="password2">
+                        
+                        <input type="text" id="comfirm_password" name="confirm_password" placeholder="確認密碼" required>
+                        
+                        <button type="submit" class="peoplebutton">Sign in</button>
+                    </div>
+                    <h5 onclick="show_hide()">登入帳號</h5>
+            </form>
+        </div>
+    </header>
+
+    <article>
+        <div id="question">
+            <br>
+            <br>
+            <br>
+            <h1>購物常見問題</h1>
+            <p class="question">
+                <a href="#Q1">Q1.購物流程說明</a><br>
+                <a href="#Q2">Q2.商品付款/配送方式</a><br>
+                <a href="#Q3">Q3.如何修改、加訂或合併訂單</a><br>
+            </p>
+            <br>
+            <br>
+        </div>
+
+        <div id="Q1">
+            <br>
+            <br>
+            <h1>Q1.購物流程說明</h1><br>
+            <p class="Q">
+                以訪客身分購物：<br>
+                選擇商品&#10142加入購物車&#10142前往結帳&#10142填寫寄送資訊&#10142訂購完成<br>
+                <br>
+                尚未成為會員者：<br>
+                註冊會員帳號&#10142登入會員&#10142選擇商品&#10142加入購物車&#10142前往結帳&#10142填寫寄送資訊&#10142訂購完成<br>
+                <br>
+                已經擁有會員者：<br>
+                選擇商品&#10142加入購物車&#10142前往結帳&#10142登入會員&#10142填寫寄送資訊&#10142訂購完成<br>
+                <br>
+                <a href="#question" class="top">&#9650Top</a>
+            </p>
+            <br>
+            <br>
+            <hr>
+        </div>
+
+        <div id="Q2">
+            <br>
+            <br>
+            <h1>Q2.商品付款/配送方式</h1><br>
+            <p class="Q">
+                目前提供以下三種方式，消費者可以自行選擇適合的方案<br>
+                <br>
+                1.超商貨到付款(配合超商：7-11/全家)<br>
+                商品將配送至您所指定的門市，到店時將會發送取貨通知，通知您前往取貨。<br>
+                <br>
+                提醒事項：<br>
+                ※因『超商貨到付款』有材積限制，下單時若發現超過材積限制時，建議您分批下單（如有運費產生請恕無法合併計算）。<br>
+                <br>
+                2.宅配貨到付款<br>
+                商品將以宅配方式寄出，並於交付貨物時收取貨款，貨物送達時會與您電話連絡，需請您務必保持電話暢通，不要拒接不認識的來電號碼，以免錯過貨物送達，連續配送三次均無法連絡，本訂單將自動取消喔！<br>
+                <br>
+                提醒事項：<br>
+                ※宅配人員僅提供送件及代收款項的服務，若會員對收到的商品有任何問題，請直接與我們連絡，配送人員無法為您辦理退換貨，目前貨到付款服務，僅接受現金付款（並請自備零錢喔）！<br>
+                ※「宅配貨到付款」服務僅限台灣本島，外島地區沒有提供「宅配貨到付款」服務，不便之處敬請見諒。<br>
+                <br>
+                3.宅配信用卡付款<br>
+                商品將以宅配方式寄出，宅配範圍目前限於台灣本島地區，外島地區將以郵局配送。<br>
+                <br>
+                <a href="#question" class="top">&#9650Top</a>
+            </p>
+            <br>
+            <br>
+            <hr>
+        </div>
+
+        <div id="Q3">
+            <br>
+            <br>
+            <h1>Q3.如何修改、加訂或合併訂單</h1><br>
+            <p class="Q">
+                為避免影響商品庫存及避免帳務錯誤，請恕我們無法為您再將訂單『修改』或『加購』或『合併』訂單商品，請在送出訂單之前確認商品以及資料無誤，若您已結帳完成訂單而有此需求，建議您可自行點選『取消訂單』。<br>
+                <br>
+                ※提醒您，如遇訂單狀態已完成出貨無法攔截時，請恕無法協助取消訂單；如有不適合的商品，再請您於七日鑑賞期內辦理退貨服務。
+                <br>
+                <a href="#question" class="top">&#9650Top</a>
+            </p>
+            <br>
+            <br>
+            <br>
+        </div>
+    </article>
+
+    <div class="footer">
+        <br>
+        <p>Copyright © 2021 罩單全收. All rights reserved.</p>
+        <br>
+    </div>
+</body>
+<script src="assets/js/people.js"></script>
+</html>
+
