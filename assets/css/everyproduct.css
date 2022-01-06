@@ -1,0 +1,144 @@
+/*商品圖片*/
+.product{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   
+    }
+    .allimg{
+        width:30%;
+        margin: auto;
+        position: relative;
+    }
+    .product-count{
+        width: 30%;
+        margin: auto;
+        color: #003d79;
+        text-align:left;
+    }
+    img {
+    vertical-align: middle;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+    display: none;
+    width: 400px;
+    margin-bottom: 10px;
+    border: 3px #a5c7e2 solid;
+    border-radius: 10px;
+    
+    }
+    .mySlides img{
+        object-fit: contain;
+        border-radius: 10px;
+        
+    }
+    .cursor {
+    cursor: pointer;
+    }
+
+    .prev,
+    .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    
+
+    /* Container for image text */
+    .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+    }
+    .row{
+        width: 400px;
+        display: flex;
+        justify-content: center;
+    }
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    /* Six columns side by side */
+    .column {
+    float: left;
+    width: 14%;
+    padding: 5px;
+    }
+
+    /* Add a transparency effect for thumnbail images */
+    .demo {
+    opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+    opacity: 1;
+    }
+/*商品文字*/
+    .product-count p{
+        padding: 10px;
+        font-size: 20px;
+    }
+/*顏色選擇*/
+    select{
+        background: url("../image/background/Palm\ leafs\ blue\ wallpaper.jpg");
+        color: #003d79;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        width: 300px;
+        height: 3em;
+        padding: 8px;
+        border-radius: 5px;
+        position: relative;
+    }
+    option {
+    position: absolute;
+    color: black;
+    }
+/*數量選擇*/
+    .num{
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+/*加入購物車按鈕*/
+    .addcart {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    background-color:white;
+    border: 1px solid #003d79;
+    border-radius: 10px;
+    color: #003d79;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    }

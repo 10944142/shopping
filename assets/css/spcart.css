@@ -1,0 +1,58 @@
+
+article{
+    margin: 0px 250px;
+    width: 1050px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: auto;
+}
+.item_header{
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+.item_header div{
+    width: 200px;
+    color: #888;
+    line-height: 30px;
+}
+.item_header .item_detail{
+    width: 50%;
+}
+.item_body{
+    margin-top: 20px;
+    height: 100px;
+    align-items: center;    
+}
+.item_detail img{
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+    /* margin-top: 10px; */
+    float: left;
+}
+.item_detail .name{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.button1{
+    border-radius: 5px;
+    width: 20px;
+}
+.button2{
+    border-radius: 5px;
+    width: 50px;
+}
+div.totalPrice{
+    margin-left: 670px;
+    float: left;
+}
+div.btn{
+    margin-left: 874px;
+    
+}

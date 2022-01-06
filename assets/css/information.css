@@ -1,0 +1,106 @@
+
+
+article{
+    margin: 0px 250px;
+    width: 1050px;
+    margin: auto;
+}
+h1{
+    margin-left: 100px;
+    color: #004B97;
+}
+.item_header{
+    display: flex;
+    width: 900px;
+    margin: 0 auto;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+.item_header div{
+    width: 200px;
+    color: #888;
+    line-height: 30px;
+}
+.item_header .item_detail{
+    width: 50%;
+}
+.item_body{
+    margin-top: 20px;
+    height: 100px;
+    align-items: center;    
+}
+.item_detail img{
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+    /* margin-top: 10px; */
+    float: left;
+}
+.item_detail .name{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+/* Style the tab */
+.tab {
+float: left;
+background-color: #f1f1f1;
+width: 10%;
+height: 190px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+display: block;
+background-color: inherit;
+color: black;
+padding: 22px 16px;
+width: 100%;
+border: none;
+outline: none;
+text-align: left;
+cursor: pointer;
+transition: 0.3s;
+font-size: 17px;
+background-color: #a5c7e2;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+background-color: #fef5d8;
+}
+
+/* Style the tab content */
+.tabcontent {
+float: left;
+padding: 0px 12px;
+width: 90%;
+border-left: none;
+height: 650px;
+margin-bottom: 50px;
+background-color: #fef5d8;
+}
+p.information{
+    font-size: 20px;
+    margin-left: 225px;
+    background-color: #c4e0f7;
+    border-radius: 20px;
+    width: 500px;
+    text-align: center;
+}
+.button{
+    margin-left: 10px;
+    width: 100px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.footer{
+    clear: both;
+}
