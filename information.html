@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>會員專區</title>
+    <style>
+        @import url("assets/css/title.css");
+        @import url("assets/css/vip.css");
+        @import url("assets/css/footer.css");
+        @import url("assets/css/information.css");
+    </style>
+</head>
+<body>
+    <header>
+        <div class="left">
+            
+            <img src="assets/image/title/5879311_mask_medical_protection_respiratory_surgical_icon.png" class="maskleft">
+            <div class="left-text">
+                <h2 class="h2-title">罩單全收</h2>
+                <button class="searchimg"><img src="assets/image/title/8377.png_300.png"></button>
+                <input class="search" type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="product.html">商品</a></li>
+                <li> <a href="spquestion.html">常見問題</a>
+                    <ul>
+                        <li><a href="spquestion.html">購物常見問題</a></li>
+                        <li><a href="return.html">退貨須知</a></li>
+                        <li><a href="mbquestion.html">會員常見問題</a></li>
+                    </ul>
+                </li>
+                <li> <a href="aboutus.html">聯絡我們</a></li>
+                <li><a href="information.html">會員專區</a></li>
+                <li onclick="document.getElementById('id01').style.display='block'" class="logsign">登入/註冊</li>
+                <a href="spcart.html"><img src="assets/image/title/shopping_cart_PNG58.png" class="cart"></a>
+                
+            </ul>
+        </div>
+            
+
+        <div id="id01" class="modal">
+            
+            <form class="modal-content animate" action="/action_page.php" method="post" id="container1">
+                <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+                    <p class="h1-title">登入 Login</p>
+                    <div class="container">
+
+                        <input type="text" placeholder="帳號" name="uname" class="username"required id="username">
+
+                        <input type="password" placeholder="密碼" name="psw"class="password" required id="password">
+                            
+                        <button type="submit" class="peoplebutton">Login</button>
+                    </div>
+                        <h5 onclick="show_hide()">註冊帳號</h5>
+            </form>
+            
+            <form class="modal-content animate" action="/action_page.php" method="post" id="container2" >
+                <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+                    <p class="h1-title">註冊 Sign Up</p>
+                    <div class="container">
+
+                        <input type="text" id="fullname" name="fullname" placeholder="使用者全名" required>
+
+                        <input type="text" placeholder="帳號" name="uname" class="username"required id="username2">
+
+                        <input type="password" placeholder="密碼" name="psw"class="password" required id="password2">
+                        
+                        <input type="text" id="comfirm_password" name="confirm_password" placeholder="確認密碼" required>
+                        
+                        <button type="submit" class="peoplebutton">Sign in</button>
+                    </div>
+                    <h5 onclick="show_hide()">登入帳號</h5>
+            </form>
+        </div>
+    </header>
+
+    <article>
+        <br>
+        <br>
+        <br>
+        <h1>會員專區</h1>
+        <br>
+        <br>
+        <div class="tab">
+        <button class="tablinks" onclick="openinformation(event, 'personal')" id="defaultOpen">個人資料</button>
+        <button class="tablinks" onclick="openinformation(event, 'oder')">訂購紀錄</button>
+        <button class="tablinks" onclick="openinformation(event, 'comment')">評論紀錄</button>
+        </div>
+
+        <div id="personal" class="tabcontent">
+            <br>
+            <br>
+            <p class="information">
+                <br>
+                個人資料修改<br>
+                <br>
+                姓名：<input type="text"><br>
+                性別：<input type="text"><br>
+                電話：<input type="text"><br>
+                地址：<input type="text"><br>
+                信箱：<input type="text"><br>
+                <br>
+                <input type="button" class="button" name="submit" value="確認修改" onclick="location.href='index.html'" />
+                <br>
+                <br>
+            </p>
+
+            <br>
+            <br>
+            <br>
+            <p class="information">
+                <br>
+                密碼修改<br>
+                <br>
+                原本設定的密碼：<input type="text"><br>
+                請輸入新的密碼：<input type="text"><br>
+                再次輸入新密碼：<input type="text"><br>
+                <br>
+                <input type="button" class="button" name="submit" value="確認修改" onclick="location.href='index.html'" />
+                <br>
+                <br>
+            </p>
+        </div>
+
+        <div id="oder" class="tabcontent">
+        <br>
+        <br>
+        <div id="app">
+            <div class="container-3">
+                <div class="item_header">
+                    <div class="item_detail">商品</div>
+                    <div class="price">單價</div>
+                    <div class="count">數量</div> 
+                    <div class="amount">總計</div>
+                </div>
+                <div class="item_container" v-for="(item, index) in itemList" :key="item.id" >
+                        <div class="item_header item_body">
+                                <div class="item_detail">
+                                    <img v-bind:src="item.imgUrl" alt="">
+                                    <div class="name">{{item.itemName}}</div>
+                                </div>
+                                
+                                <div class="price"><span>$</span>{{item.price}}</div>
+                                <div class="count">
+                                    {{item.count}}
+                                </div> 
+                                <div class="amount">{{item.price * item.count}}</div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div id="comment" class="tabcontent">
+        <br>
+        <br>
+            <div id="app2">
+                <div class="container-3">
+                    <div class="item_header">
+                        <div class="item_detail">商品</div>
+                        <div>評論</div>
+                        <div>時間</div>
+                    </div>
+                    <div class="item_container" v-for="(item, index) in itemList" :key="item.id" >
+                            <div class="item_header item_body">
+                                    <div class="item_detail">
+                                        <img v-bind:src="item.imgUrl" alt="">
+                                        <div class="name">{{item.itemName}}</div>
+                                    </div>
+                                    <div class="comment">{{item.comment}}</div>
+                                    <div class="time">{{item.time}}</div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <div class="footer">
+        <br>
+        <p>Copyright © 2021 罩單全收. All rights reserved.</p>
+        <br>
+    </div>
+</body>
+<script src="assets/js/information.js"></script>
+</html>
