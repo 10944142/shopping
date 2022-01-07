@@ -6,7 +6,7 @@ var app = new Vue({
             id:'1',
             itemName:'醫用口罩30入-灰濛草綠',
             imgUrl:'assets/image/mask/S__12681249.jpg',
-            price:'299',
+            price:'229',
             count:'2'
           },
           {
