@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乾洗手</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+    <style>
+        @import url("assets/css/star.css");
+        @import url("assets/css/title.css");
+        @import url("assets/css/vip.css");
+        @import url("assets/css/footer.css");
+        @import url("assets/css/everyproduct.css");
+        @import url("assets/css/wash.css"); 
+        @import url("assets/css/top.css");
+        @import url("assets/css/star-1.css");     
+    </style>
+</head>
+<body>
+    <!--標頭-->
+    <header>
+        <div class="left">
+            
+            <img src="assets/image/title/5879311_mask_medical_protection_respiratory_surgical_icon.png" class="maskleft">
+            <div class="left-text">
+                <h2 class="h2-title">罩單全收</h2>
+                <button class="searchimg"><img src="assets/image/title/8377.png_300.png"></button>
+                <input class="search" type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="product.html">商品</a></li>
+                <li> <a href="spquestion.html">常見問題</a>
+                    <ul>
+                        <li><a href="spquestion.html">購物常見問題</a></li>
+                        <li><a href="return.html">退貨須知</a></li>
+                        <li><a href="mbquestion.html">會員常見問題</a></li>
+                    </ul>
+                </li>
+                <li> <a href="aboutus.html">聯絡我們</a></li>
+                <li><a href="information.html">會員專區</a></li>
+                <li onclick="document.getElementById('id01').style.display='block'" class="logsign">登入/註冊</li>
+                <a href="spcart.html"><img src="assets/image/title/shopping_cart_PNG58.png" class="cart"></a>
+                
+            </ul>
+        </div>
+            
+
+        <div id="id01" class="modal">
+            
+            <form class="modal-content animate" action="/action_page.php" method="post" id="container1">
+                <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+                    <p class="h1-title">登入 Login</p>
+                    <div class="container">
+
+                        <input type="text" placeholder="帳號" name="uname" class="username"required id="username">
+
+                        <input type="password" placeholder="密碼" name="psw"class="password" required id="password">
+                            
+                        <button type="submit" class="peoplebutton">Login</button>
+                    </div>
+                        <h5 onclick="show_hide()">註冊帳號</h5>
+            </form>
+            
+            <form class="modal-content animate" action="/action_page.php" method="post" id="container2" >
+                <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+                    <p class="h1-title">註冊 Sign Up</p>
+                    <div class="container">
+
+                        <input type="text" id="fullname" name="fullname" placeholder="使用者全名" required>
+                        <input type="text" id="mail" name="mail" placeholder="使用者電子郵件" required>
+
+                        <input type="text" placeholder="帳號" name="uname" class="username"required id="username2">
+                        <input type="text" id="tel" name="tel" placeholder="電話" required>
+                        <input type="text" id="addr" name="addr" placeholder="地址" required>
+                        <input type="password" placeholder="密碼" name="psw"class="password" required id="password2">
+                        
+                        <input type="text" id="comfirm_password" name="confirm_password" placeholder="確認密碼" required>
+                        
+                        <button type="submit" class="peoplebutton">Sign in</button>
+                    </div>
+                    <h5 onclick="show_hide()">登入帳號</h5>
+            </form>
+        </div>
+    </header>
+     <!--商品照片-->
+    <div class="product">
+        <div class="allimg">
+            <div class="mySlides">
+                <img src="assets/image/wash/wash-1.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="assets/image/wash/wash-2.png" style="width:100%">
+              </div>
+            
+              <div class="mySlides">
+                <img src="assets/image/wash/wash-3.png" style="width:100%">
+              </div>
+                
+              <div class="mySlides">
+                <img src="assets/image/wash/wash-4.png" style="width:100%">
+              </div>
+            
+              <div class="mySlides">
+                <img src="assets/image/wash/wash-5.png" style="width:100%">
+              </div>
+                
+              <div class="mySlides">
+                <img src="assets/image/wash/wash-6.png" style="width:100%">
+              </div>
+
+              <div class="row">
+                <div class="column">
+                  <img class="demo cursor" src="assets/image/wash/wash-1.png" style="width:100%" onclick="currentSlide(1)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="assets/image/wash/wash-2.png" style="width:100%" onclick="currentSlide(2)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="assets/image/wash/wash-3.png" style="width:100%" onclick="currentSlide(3)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="assets/image/wash/wash-4.png" style="width:100%" onclick="currentSlide(4)" >
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="assets/image/wash/wash-5.png" style="width:100%" onclick="currentSlide(5)">
+                </div>    
+                <div class="column">
+                  <img class="demo cursor" src="assets/image/wash/wash-6.png" style="width:100%" onclick="currentSlide(6)">
+                </div>
+              </div>
+        </div>
+         <!--商品文字-->
+        <div class="product-count">
+            <h2>Oooh乾洗手</h2><br>
+            <p>$120</p>
+            <p>台灣製造，獨家設計款~網紅人手一瓶，簡約百搭的 Oooh 小圓瓶香氛免洗手噴霧專屬的多色矽膠保護套，附上貼心的掛鉤，矽膠保護套防撞防摔，柔軟防刮。防疫期間隨身攜帶的乾洗手，隨手掛 輕鬆取用超便利，用專屬於你的香氛與顏色配上你的與眾不同。
+            </p>
+            <p>款式
+            <select>
+                <option>請選擇你顏色</option>
+                <option>黑色</option>
+                <option>白色</option>
+                <option>綠色</option>
+                <option>藍色</option>
+                <option>橙色</option>
+                <option>黃色</option>
+            </select>
+            </p>
+            
+            <div class="num">
+                <p>數量
+                <span class="numbottom">
+                    <button onclick="Less()" class="buttonstyle">－</button>
+                    <span class="centernum" id="itemcount">1</span>
+                    <button onclick="Add()" class="buttonstyle">＋</button>
+                </span>
+                <button type="submit" class="addcart" onclick="javascript:alert('Add to cart')">加入購物車</button>
+                </p>
+                
+            </div>
+           
+        </div>
+    </div>
+     <!--商品介紹-->
+     <div class="colorandtext">
+        <div class="all-product">
+            <p class="coloe-style">|&nbsp;商品顏色&nbsp;|</p>
+            <div class="product-up">
+
+                <div class="productcolor">
+                    <div class="product-1">
+                        <img src="assets/image/wash/wash-2.png">
+                        <p class="product-text">藍色</p>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="productcolor">
+                    <div class="product-2">
+                        <img src="assets/image/wash/wash-3.png">
+                        <p class="product-text">綠色</p>
+                    </div>
+                </div>
+
+                <div class="productcolor">
+                    <div class="product-3">
+                        <img src="assets/image/wash/wash-4.png">
+                        <p class="product-text">黃色</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="product-down">
+                <div class="productcolor">
+                    <div class="product-1">
+                            <img src="assets/image/wash/wash-5.png">
+                            <p class="product-text">橙色</p>
+                    </div>
+                </div>
+                <div class="productcolor">
+                    <div class="product-2">
+                            <img src="assets/image/wash/wash-6.png">
+                            <p class="product-text">白色</p>
+                    </div>
+                </div>
+                <div class="productcolor">
+                    <div class="product-3">
+                            <img src="assets/image/wash/wash-7.png">
+                            <p class="product-text">黑色</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--評論區-->
+        <div class="producttext">
+            <p class="coloe-style">|&nbsp;評論區&nbsp;|</p><br>
+                <p>寫下你的資料與意見，我們將再與您聯絡。</p>
+                <br>
+            <!--輸入框 先宣告submit不回傳 再定義各個欄位form內容-->
+            <form action="" method="post" onsubmit="return false;">
+                <input type="text" id="username-3" name="username-3" value="" placeholder="姓名" class="BG-Copy" size="30" />
+                <br>
+                <textarea name="feedback" id="feedback" rows="8" cols="80" placeholder="想說甚麼都可以" class="BG-Copy"
+                style="border:2px #003d79 solid;"></textarea>
+                <!--星星-->
+                <div class="rating" id="rating">
+
+                    <input type="radio" name="rating" id="r1">
+                    <label for="r1"></label>
+                   
+                    <input type="radio" name="rating" id="r2">
+                    <label for="r2"></label>
+                   
+                    <input type="radio" name="rating" id="r3">
+                    <label for="r3"></label>
+                   
+                    <input type="radio" name="rating" id="r4">
+                    <label for="r4"></label>
+                   
+                    <input type="radio" name="rating" id="r5">
+                    <label for="r5"></label>
+                   <br><br>
+                </div>
+            <!-- 定義送出鍵的動作，使用JavaScript的function-->
+                <input type="submit" value="送出" class="Base" style='text-align:"right"' onclick='processFormData();addMsg()'>
+            </form>
+            <br>
+<!--留言板-->
+            <caption>
+                <h3 style="color: #003d79;"><strong>|&nbsp;留言板&nbsp;|</strong></h3>
+            </caption>
+                <br>
+                <!-- 表格定義 設定置中 -->
+                <table width="800px" allign="center" id='Feedback_table'>
+                <tr>
+                    <th width="15%">時間</th>
+                    <th width="15%">姓名</th>
+                    <th width="30%">意見內容</th>
+                    <th width="10%">評價</th>
+                </tr>
+                <tr>
+                    <th width="15%" class="th-1" >2022/1/8 11:30</th>
+                    <th width="15%" class="th-1" >小璇</th>
+                    <th width="30%" class="th-1" >非常方便!</th>
+                    <th width="10%" class="th-1" >★★★★☆</th>
+                </tr>
+                <tr>
+                    <th width="15%" class="th-1" >2022/1/5 11:30</th>
+                    <th width="15%" class="th-1" >小慈</th>
+                    <th width="30%" class="th-1" >出門必備商品</th>
+                    <th width="10%" class="th-1" >★★★★☆</th>
+                </tr>
+                </table>
+        </div><br>
+        <div class="top">
+            <button onclick="topFunction()" id="myBtn" title="Gotop">TOP</button>
+        </div>
+    <div class="footer">
+        <br>
+        <p>Copyright © 2021 罩單全收. All rights reserved.</p>
+        <br>
+    </div>
+</body>
+    <script src="js/index.js"></script>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/top.js"></script>
+</html>
